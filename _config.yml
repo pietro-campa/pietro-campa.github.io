@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Pietro Campa"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Pietro Campa"
 description              : &description "Ph.D. Candidate"
