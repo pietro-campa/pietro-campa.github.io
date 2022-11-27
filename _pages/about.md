@@ -8,5 +8,5 @@ redirect_from:
   - /about.html
 ---
 
-My new page!
+# Ph.D. Candidate at University of Geneva.
 
