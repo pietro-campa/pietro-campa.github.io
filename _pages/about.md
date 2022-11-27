@@ -12,6 +12,6 @@ redirect_from:
 
 Some other info
 
-Downolad my [<span style="color:blue">CV</span>](CV_Campa.pdf)
+Downolad my [<span style="color:blue">CV</span>](https://github.com/pietro-campa/pietro-campa.github.io/blob/c1b55adb0a96b74c37d5e79b676aca76d09a4b86/files/CV_Campa.pdf)
 
 List of Projects
