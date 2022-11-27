@@ -11,3 +11,7 @@ redirect_from:
 ### Ph.D. Candidate at University of Geneva.
 
 Some other info
+
+Downolad my [<span style="color:blue">CV</span>](CV_Campa.pdf)
+
+List of Projects
