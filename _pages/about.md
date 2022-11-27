@@ -8,5 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-# Ph.D. Candidate at University of Geneva.
+### Ph.D. Candidate at University of Geneva.
 
+Some other info
