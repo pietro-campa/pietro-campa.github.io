@@ -8,4 +8,4 @@ redirect_from:
 ---
 
 
-Downolad my [<span style="color:blue">CV</span>](files/CV_Campa.pdf)
+Downolad my [<span style="color:blue">CV</span>](https://pietro-campa.github.io/files/CV_Campa.pdf)
