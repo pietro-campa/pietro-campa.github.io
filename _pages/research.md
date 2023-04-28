@@ -18,3 +18,5 @@ We study how inheriting parents’ credit histories affects credit scores and ac
 
 "**Values for Grandchildren: The Role of Grandparents in Intergenerational Transmission of Income.**"  
 *(Joint with Giacomo De Giorgi, Mauricio Prado and Battista Severgnini.)* 
+
+We study the role of direct interactions between children and their grandparents in the process of human capital accumulation within the family. Using Danish administrative data, we document grandparental effects on children’s life-time incomes other than grandparents’ influence on parental human capital. These results call for broadening the scope of established models of intergenerational mobility and human capital accumulation within the family which consider only two generations. Finally, we propose mass-layoffs as a potential source of exogenous variation in retirement time to estimate the causal impact of grandparental interactions on their grandkids.
