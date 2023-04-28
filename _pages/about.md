@@ -10,7 +10,7 @@ redirect_from:
 
 ### Ph.D. Candidate at University of Geneva.
 
-Some other info
+I am an applied micro-economist interested in intergenerational transmission of inequality. In my work I study how initial conditions shape individuals' access to oportunities. 
 
 Downolad my [<span style="color:blue">CV</span>](files/CV_Campa.pdf)
 
