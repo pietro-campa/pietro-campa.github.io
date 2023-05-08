@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-### Ph.D. Candidate at University of Geneva.
+### Ph.D. Candidate in Economics at University of Geneva.
 
 I am an applied micro-economist interested in intergenerational transmission of inequality. In my work I study how initial conditions shape individuals' access to oportunities. I have a specific interest in why families sort across different neighborhoods and what are the impications of this for their children. I like maps and models.
 
