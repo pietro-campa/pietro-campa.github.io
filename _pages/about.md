@@ -14,7 +14,7 @@ I am an applied micro-economist interested in intergenerational transmission of 
 
 Downolad my [<span style="color:blue">CV</span>](files/CV_Campa.pdf)
 
-I am learning a lot as an ally of [https://www.rarevoicesineconomics.com/](Rare Voices in Economics): check out our activities!
+I am learning a lot as an ally of [Rare Voices in Economics](https://www.rarevoicesineconomics.com/): check out our activities!
 
 
 
