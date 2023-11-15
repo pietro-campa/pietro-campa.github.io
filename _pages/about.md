@@ -10,11 +10,11 @@ redirect_from:
 
 ### Ph.D. Candidate in Economics at University of Geneva.
 
-I am an applied microeconomist interested in intergenerational transmission of inequality. In my work I study how initial conditions shape individuals' access to opportunities. I have a specific interest in why families sort across different neighborhoods and what are the implications of this choice for their children. I like maps and models.
+As an applied microeconomist, my research focus is on intergenerational transmission of inequalities. I am interested in how initial conditions shape access to opportunities. I delve into various dimensions of inequality related to these initial conditions, including peer effects in education, and access to jobs within a city. I have a specific interest in why families sort across different neighborhoods and what are the implications of this choice for their children. 
 
 Downolad my [<span style="color:blue">CV</span>](files/CV_Campa.pdf)
 
-I am learning a lot as an ally of [Rare Voices in Economics](https://www.rarevoicesineconomics.com/): check out our activities!
+I am a member of [Rare Voices in Economics](https://www.rarevoicesineconomics.com/): check out our activities!
 
 
 
