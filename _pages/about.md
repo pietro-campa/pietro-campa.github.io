@@ -14,7 +14,7 @@ As an applied microeconomist, my research focus is on intergenerational transmis
 
 ## Some news: 
 * I will be visiting the [Dep. of Economics of University of California at Berkeley](https://www.econ.berkeley.edu/) in the Spring of 2024.
-* I will be presenting at [SOLE](https://www.sole-jole.org/upcoming-meeting), Portland in May 2024.
+* I will be presenting at [SOLE](https://www.sole-jole.org/upcoming-meeting) Annual Meeting, Portland in May 2024.
 
 Downolad my [<span style="color:blue">CV</span>](files/CV_Campa.pdf)
 
