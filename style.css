@@ -1,0 +1,126 @@
+
+body {
+  background-color: background-color: #fff;
+}
+
+h1 {
+  font-size: 20px;
+}
+ 
+h2 {
+  font-size: 18px;
+}
+
+h3{
+  font-size: 16px;
+  font-weight: normal
+}
+
+p {
+  font-size: 14px;
+  color: black
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* The navigation menu */
+header {
+  height: 40px;
+  width: 100%;
+  background-color:  #f5f5f5; /* Black */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  padding-top: 10px;
+  margin-top: 3px;
+  overflow: hidden;
+  top: 0;
+}
+  /* The navigation menu links */
+header a {
+  text-decoration: none;
+  margin-right: 40px;
+  font-size: 16px;
+  color:  black;
+  display: inline-block;
+}
+  
+  /* When you mouse over the navigation links, change their color */
+header a:hover {
+  color: blue;
+}
+  
+
+/* Style page content */
+.main {
+  margin-left: 20px; 
+  margin-top: 70px; 
+}
+
+/* Home page: picture and bio side by side*/
+
+.home {
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 0.75fr 1.25fr;
+  column-gap: 5px;
+}
+
+/* reshape the picture */
+img {
+  width: 40%;
+}
+
+/* Research Section */
+
+#research{
+  margin-left: 25px;
+}
+
+
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+/* Parent Container */
+.content_img{
+    position: relative;
+    width: 200px;
+    height: auto;
+    float: center;
+    margin-right: 10px;
+}
+
+/* Child Text Container */
+.content_img div{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.content_img:hover{
+    cursor: pointer;
+}
+
+.content_img:hover div{
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7; 
+}
