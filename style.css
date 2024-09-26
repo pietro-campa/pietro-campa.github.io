@@ -5,13 +5,15 @@
 body {
   background-color: background-color: #fff;
   font-family: 'Inter', sans-serif;font-size: 22px;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .main {
-  margin-left: 40px; 
-  margin-right: 40px; 
+  margin-left: 150px; 
+  margin-right: 150px; 
   margin-top: 40px; 
-  margin-bottom: 40px; 
+  margin-bottom: 100px; 
 }
 
 .center {
@@ -19,6 +21,17 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.box {
+  background-color: #00000062; /* Green background */
+  color: white; /* White text color */
+  padding: 20px; /* Padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  font-size: 20px; /* Font size */
+  text-align: center; /* Center the text */
+  margin-top: 30px; /* Add space above the box */
 }
 
 /* The navigation menu */
@@ -64,17 +77,23 @@ header a:hover {
 }
 
 .intro-band img {
-  width: 80%; /* Controls the size of the image */
+  width: 70%; /* Controls the size of the image */
   margin-right: 20px; /* Adds space between the image and text */
   border-radius: 10px; /* Optional: rounds the image corners */
 }
 
-.intro-band h3 {
-  font-size: 18px; /* Font size for the title */
-  color: #333; /* Text color */
-  margin-bottom: 10px; /* Adds space below the title */
+.intro-band h3gr {
+  font-size: 16px; 
+  color: #666; /* Text color */
+  margin-bottom: 10px; 
+  margin-top: 50px; 
 }
 
+.intro-band h3 {
+  font-size: 18px; /* Font size for the title */
+  color:  #333; /* Text color */
+  margin-bottom: 10px; /* Adds space below the title */
+}
 
 .intro-band p {
   font-size: 16px; /* Font size for the paragraph */
@@ -115,6 +134,7 @@ header a:hover {
   text-align: justify; /* Justify text alignment */
   color: rgb(255, 128, 0);
   text-decoration: underline;
+  font-size: 16px; /* Font size for the paragraph */
 }
 
 .styled-list {
@@ -162,13 +182,14 @@ header a:hover {
   max-width: 100%; /* Ensures text doesn’t stretch too wide */
   color: #333; /* Text color */
   text-align: justify; /* Justify text alignment */
+  margin-bottom: 5px;
 }
 
 .jmp-band a {
-  font-size: 14px; /* Font size for the paragraph */
+  font-size: 18px; /* Font size for the paragraph */
   line-height: 1.6; /* Improves readability */
   max-width: 100%; /* Ensures text doesn’t stretch too wide */
-  text-align: justify; /* Justify text alignment */
+  text-align: left; /* Justify text alignment */
   color: rgb(255, 128, 0);
   text-decoration: underline;
 }
@@ -217,7 +238,9 @@ header a:hover {
   border-collapse: collapse;
   text-align: left;
   margin-top: 20px;
-  margin-left: 50px;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ccc;
   cursor: pointer;
@@ -231,7 +254,7 @@ header a:hover {
   transition: all 0.3s ease;
   position: relative;
   background-color: #f9f9f9;
-  font-size: 16px; /* Font size for the paragraph */
+  font-size: 18px; /* Font size for the paragraph */
   line-height: 1.6; /* Improves readability */
   max-width: 100%; /* Ensures text doesn’t stretch too wide */
   color: #333; /* Text color */
@@ -246,7 +269,7 @@ header a:hover {
   display: none;
   margin-top: 10px;
   color: #000000;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .expanded-content {
@@ -257,7 +280,7 @@ header a:hover {
 }
 
 .expanded-content a {
-  font-size: 14px; /* Font size for the paragraph */
+  font-size: 18px; /* Font size for the paragraph */
   line-height: 1.6; /* Improves readability */
   max-width: 100%; /* Ensures text doesn’t stretch too wide */
   text-align: justify; /* Justify text alignment */
@@ -268,7 +291,7 @@ header a:hover {
 .expanded-content img {
   border-radius: 10px; /* Optional: rounds the image corners */
   display: block;
-  max-width:400px;
+  max-width:500px;
   max-height:400px;
   width: auto;
   height: auto;
@@ -289,7 +312,7 @@ header a:hover {
   color: #666;                    /* Softer color for the subtitle */
   letter-spacing: 1px;            /* Slightly less letter spacing than the main title */
   text-transform: capitalize;     /* Optional: capitalizes the first letter of each word */
-  margin-top: 30px;               /* Adds space between the title and subtitle */
+  margin-top: 60px;               /* Adds space between the title and subtitle */
   margin-bottom: 20px;            /* Adds space below the subtitle */
   margin-left: 50px;
   position: relative;
@@ -340,12 +363,47 @@ tr:nth-child(even) {
 .note {
 width: 50%;
 margin: 5px auto;
-font-size: 14px;
-color: #555;
+margin-bottom: 80px;
+font-size: 16px;
+color: #363535;
 text-align: center;
 }
 
 /* Add some padding for empty cells */
 td[colspan] {
   padding: 10px;
+}
+
+
+.title {
+  text-align: center;
+  font-size: 1.5em;               /* Slightly smaller than the main title */
+  color: #666;                    /* Softer color for the subtitle */
+  letter-spacing: 1px;            /* Slightly less letter spacing than the main title */
+  text-transform: capitalize;     /* Optional: capitalizes the first letter of each word */
+  margin-top: 10px;               /* Adds space between the title and subtitle */
+  margin-bottom: 10px;            /* Adds space below the subtitle */
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  width: 100px;                    /* A shorter underline for the subtitle */
+  height: 2px;
+  background-color: #f39c12;      /* Matching the underline color of the main title */
+  position: absolute;
+  bottom: -8px;                   /* Closer to the subtitle text */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;             /* Softer edges for the line */
+}
+
+.a {
+  line-height: 1.6; /* Improves readability */
+  max-width: 100%; /* Ensures text doesn’t stretch too wide */
+  text-align: justify; /* Justify text alignment */
+  color: rgb(255, 128, 0);
+  text-decoration: underline;
+  font-size: 16px; /* Font size for the paragraph */
 }
