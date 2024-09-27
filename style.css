@@ -407,3 +407,13 @@ td[colspan] {
   text-decoration: underline;
   font-size: 16px; /* Font size for the paragraph */
 }
+
+
+.email-button {
+  line-height: 1.6; /* Improves readability */
+  max-width: 100%; /* Ensures text doesn’t stretch too wide */
+  text-align: justify; /* Justify text alignment */
+  color: rgb(255, 128, 0);
+  text-decoration: underline;
+  font-size: 16px; /* Font size for the paragraph */
+}
