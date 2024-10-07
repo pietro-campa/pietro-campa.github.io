@@ -1,419 +1,461 @@
-
-/* General Stuff */
-/*****************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
 body {
-  background-color: background-color: #fff;
-  font-family: 'Inter', sans-serif;font-size: 22px;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 30px 0px 0px; /* Top margin accounts for fixed header */
 }
 
 .main {
-  margin-left: 150px; 
-  margin-right: 150px; 
-  margin-top: 40px; 
-  margin-bottom: 100px; 
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+/* Header */
+
+/* Header Styles */
+header {
+  width: 100%;
+  height: 80px; /* Fixed height for the header */
+  background-color: rgba(243, 157, 18, 0.65); /* Semi-transparent orange */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 10px; /* Remove vertical padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center; /* Center the navigation container */
+  align-items: center; /* Vertically center the navigation items */
+  z-index: 1000; /* Ensure the header stays on top */
+  box-sizing: border-box;       
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.navbar {
+  width: 100%; /* Make sure the content spans the full width */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space out items */
+  align-items: center; /* Center items vertically */
+  padding: 0 10px; /* Horizontal padding */
+}
+
+.nav-logo {
+  font-size: 1.8em; /* Increased size for emphasis */
+  color: #ffffff; /* White color for contrast */
+  letter-spacing: 1.25px; /* Spacing between letters */
+  text-transform: capitalize; /* Capitalize words */
+  margin-left: 100px; /* Left margin for spacing */
+  text-decoration: none; /* Remove underline */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Space between links */
+  margin-right: 100px; /* Left margin for spacing */
+}
+
+.nav-menu li a {
+  font-size: 1.25em;
+  color:  rgb(252, 236, 207);
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.nav-menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color:  white;
+}
+
+.nav-menu li a:hover::after {
+  width: 100%;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 10px; /* Space between links */
+    margin-right: 20px; /* Left margin for spacing */
+  }
+  
+  .nav-menu li a {
+    font-size: 1.25em;
+    color:  rgb(252, 236, 207);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+  }
+  .nav-logo {
+    margin-left: 20px; /* Left margin for spacing */
+  }
+}
+
+/* Two Boxes Side by Side */
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    height: auto; /* Ensures both boxes will have auto-adjusted height based on content */
 }
 
 .box {
-  background-color: #00000062; /* Green background */
-  color: white; /* White text color */
-  padding: 20px; /* Padding around the text */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  font-size: 20px; /* Font size */
-  text-align: center; /* Center the text */
-  margin-top: 30px; /* Add space above the box */
+    padding: 20px;
+    border: 0px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* The navigation menu */
-/***********************/
-
-header {
-  height: 40px;
-  width: 100%;
-  background-color: #f39d12a5; /* Black */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  padding-top: 10px;
-  margin-top: 3px;
-  overflow: hidden;
-  top: 0;
-  display: flex;
-  justify-content: flex-end;
-}
-  /* The navigation menu links */
-header a {
-  text-decoration: none;
-  margin-right: 40px;
-  font-size: 16px;
-  color:  rgb(247, 244, 244);
-  display: inline-block;
-}
-  
-  /* When you mouse over the navigation links, change their color */
-header a:hover {
-  color: blue;
-}
-  
-/* Inroduction banner */
-/**********************/
-
-.intro-band {
-  width: 100%; /* Ensures the band spans the full width of the screen */
-  background-color: #ffffff; /* Light grey background for the band */
-  padding: 40px 0; /* Adds space above and below the content */
-  display: flex; /* Places image and text side by side */
-  justify-content: center; /* Centers the content within the band */
-  align-items: center; /* Aligns content vertically in the center */
-  margin-top: 30px;
+/* Box 1 smaller */
+.box:first-child {
+    flex-basis: 35%; /* Fixed proportion of space (40%) */
+    margin-right: 20px;
 }
 
-.intro-band img {
-  width: 70%; /* Controls the size of the image */
-  margin-right: 20px; /* Adds space between the image and text */
-  border-radius: 10px; /* Optional: rounds the image corners */
+/* Box 2 larger */
+.box:last-child {
+    flex-basis: 75%; /* Fixed proportion of space (60%) */
 }
 
-.intro-band h3gr {
-  font-size: 16px; 
-  color: #666; /* Text color */
-  margin-bottom: 10px; 
-  margin-top: 50px; 
+/* Ensure same height by default */
+.boxes > .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch; /* Makes both boxes stretch to the same height */
 }
 
-.intro-band h3 {
-  font-size: 18px; /* Font size for the title */
-  color:  #333; /* Text color */
-  margin-bottom: 10px; /* Adds space below the title */
+.box h2{
+    text-align: center;
+    font-size:40px;               /* Slightly smaller than the main title */
+    color: #666;                    /* Softer color for the subtitle */
+    letter-spacing: 1px;            /* Slightly less letter spacing than the main title */
+    text-transform: capitalize;     /* Optional: capitalizes the first letter of each word */
+    margin-top: 10px;               /* Adds space between the title and subtitle */
+    margin-bottom: 10px;            /* Adds space below the subtitle */
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
 }
 
-.intro-band p {
-  font-size: 16px; /* Font size for the paragraph */
-  line-height: 1.6; /* Improves readability */
-  max-width: 90%; /* Ensures text doesn’t stretch too wide */
-  color: #333; /* Text color */
-  text-align: justify; /* Justify text alignment */
+.box h2::after {
+    content: '';
+    width: 200px;                    /* A shorter underline for the subtitle */
+    height: 2px;
+    background-color: rgba(243, 157, 18, 0.65);      /* Matching the underline color of the main title */
+    position: absolute;
+    bottom: -8px;                   /* Closer to the subtitle text */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;             /* Softer edges for the line */
 }
 
-/* Styling for the intro title */
-.intro-band title {
-  text-align: center;
-  font-size: 1.5em;               /* Slightly smaller than the main title */
-  color: #666;                    /* Softer color for the subtitle */
-  letter-spacing: 1px;            /* Slightly less letter spacing than the main title */
-  text-transform: capitalize;     /* Optional: capitalizes the first letter of each word */
-  margin-top: 10px;               /* Adds space between the title and subtitle */
-  margin-bottom: 10px;            /* Adds space below the subtitle */
-  position: relative;
-  display: inline-block;
-}
 
-.intro-band title::after {
-  content: '';
-  width: 100px;                    /* A shorter underline for the subtitle */
-  height: 2px;
-  background-color: #f39c12;      /* Matching the underline color of the main title */
-  position: absolute;
-  bottom: -8px;                   /* Closer to the subtitle text */
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 3px;             /* Softer edges for the line */
-}
 
-.intro-band a {
-  line-height: 1.6; /* Improves readability */
-  max-width: 100%; /* Ensures text doesn’t stretch too wide */
-  text-align: justify; /* Justify text alignment */
-  color: rgb(255, 128, 0);
-  text-decoration: underline;
-  font-size: 16px; /* Font size for the paragraph */
-}
-
-.styled-list {
-  list-style-type: none; /* Removes default bullet points */
-  padding: 0; /* Removes padding from the list */
-}
-
-.styled-list li {
-  position: relative;
-  padding-left: 20px; /* Adds space for custom bullet */
-  margin-bottom: 10px; /* Adds space between list items */
-  line-height: 1.6; /* Improves readability */
-  color: #333; /* Text color */
-}
-
-.styled-list li::before {
-  content: '\2022'; /* Unicode for a bullet symbol */
-  position: absolute;
-  left: 0;
-  color: #f39c12; /* Matching color with the title underline */
-  font-size: 20px; /* Size of the bullet */
+/* The default styling for all paragraphs remains justified */
+.box p {
+  font-size: 20px;
   line-height: 1.6;
+  max-width: 100%;
+  color: #333;
+  text-align: justify;
+  margin: 10px 20px;
+}
+  
+.center-text {
+  text-align: center !important;
 }
 
-/* JMP banner */
-/**********************/
-.jmp-band {
-  width: 100%; /* Ensures the band spans the full width of the screen */
-  background-color: #f39d1228; /* Light grey background for the band */
-  padding: 40px 0; /* Adds space above and below the content */
-  display: flex; /* Places image and text side by side */
-  justify-content: center; /* Centers the content within the band */
-  align-items: center; /* Aligns content vertically in the center */
+.justify-text {
+  text-align: justify !important; /* Explicitly justify only these paragraphs */
 }
 
-.jmp-band .text-content {
-  flex: 1; /* Allows the text content to take up the remaining space */
-  margin-left: 50px; /* Space between text and image */
-  margin-right: 30px; /* Space between text and image */
+.box a {
+    line-height: 1.6; /* Improves readability */
+    color: rgb(255, 128, 0);
+    text-decoration: underline;
+    font-size: 20px; /* Font size for the paragraph */
 }
-
-.jmp-band p {
-  font-size: 16px; /* Font size for the paragraph */
-  line-height: 1.6; /* Improves readability */
-  max-width: 100%; /* Ensures text doesn’t stretch too wide */
-  color: #333; /* Text color */
-  text-align: justify; /* Justify text alignment */
-  margin-bottom: 5px;
-}
-
-.jmp-band a {
-  font-size: 18px; /* Font size for the paragraph */
-  line-height: 1.6; /* Improves readability */
-  max-width: 100%; /* Ensures text doesn’t stretch too wide */
-  text-align: left; /* Justify text alignment */
-  color: rgb(255, 128, 0);
-  text-decoration: underline;
-}
-
-.jmp-band .image-content {
-  flex: 0 0 30%; /* Sets the image container to take up 20% of the width */
-}
-
-.jmp-band img {
-  width: 95%; /* Ensures the image fills its container */
-  border-radius: 10px; /* Optional: rounds the image corners */
-}
-
-.jmp-band title {
-  text-align: left;
-  font-size: 1.25em;               /* Slightly smaller than the main title */
-  color: #666;                    /* Softer color for the subtitle */
-  letter-spacing: 1px;            /* Slightly less letter spacing than the main title */
-  text-transform: capitalize;     /* Optional: capitalizes the first letter of each word */
-  margin-top: 10px;               /* Adds space between the title and subtitle */
-  margin-bottom: 10px;            /* Adds space below the subtitle */
-  position: relative;
-  display: inline-block;
-}
-
-.jmp-band h2 {
-  font-size: 18px;
-}
-
-.jmp-band title::after {
-  content: '';
-  width: 100px;                    /* A shorter underline for the subtitle */
-  height: 2px;
-  background-color: #f39c12;      /* Matching the underline color of the main title */
-  position: absolute;
-  bottom: -8px;                   /* Closer to the subtitle text */
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 3px;             /* Softer edges for the line */
-}
-
-/* Styling for research section */
-
-.expandable-table {
-  width: 95%;
-  border-collapse: collapse;
-  text-align: left;
-  margin-top: 20px;
-  margin-left: 75px;
-  margin-right: 75px;
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.expandable-table td {
-  padding: 20px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  background-color: #f9f9f9;
-  font-size: 18px; /* Font size for the paragraph */
-  line-height: 1.6; /* Improves readability */
-  max-width: 100%; /* Ensures text doesn’t stretch too wide */
-  color: #333; /* Text color */
-  text-align: justify; /* Justify text alignment */
-}
-
-.expandable-table td em, .expandable-table td i {
-  font-style: italic;
-}
-
-.expandable-table td p {
-  display: none;
-  margin-top: 10px;
-  color: #000000;
-  font-size: 18px;
-}
-
-.expanded-content {
-  display: flex;
-  align-items: top; /* Center the items vertically */
-  margin-top: 20px; /* Add some space above the image */
-  gap: 25px; /* Add some space between the image and the text */
-}
-
-.expanded-content a {
-  font-size: 18px; /* Font size for the paragraph */
-  line-height: 1.6; /* Improves readability */
-  max-width: 100%; /* Ensures text doesn’t stretch too wide */
-  text-align: justify; /* Justify text alignment */
-  color: rgb(255, 128, 0);
-  text-decoration: underline;
-}
-
-.expanded-content img {
-  border-radius: 10px; /* Optional: rounds the image corners */
-  display: block;
-  max-width:500px;
-  max-height:400px;
-  width: auto;
-  height: auto;
-}
-
-.expandable-table td.expanded {
-  background-color: #e0f7fa;
-  height: auto;
-}
-
-.expandable-table td.expanded p {
-  display: block;
-}
-
-.table-title {
-  text-align: left;
-  font-size: 1.25em;               /* Slightly smaller than the main title */
-  color: #666;                    /* Softer color for the subtitle */
-  letter-spacing: 1px;            /* Slightly less letter spacing than the main title */
-  text-transform: capitalize;     /* Optional: capitalizes the first letter of each word */
-  margin-top: 60px;               /* Adds space between the title and subtitle */
-  margin-bottom: 20px;            /* Adds space below the subtitle */
-  margin-left: 50px;
-  position: relative;
-  display: inline-block;
-}
-
-.table-title::after {
-  content: '';
-  width: 100px;                    /* A shorter underline for the subtitle */
-  height: 2px;
-  background-color: #f39c12;      /* Matching the underline color of the main title */
-  position: absolute;
-  bottom: -8px;                   /* Closer to the subtitle text */
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 3px;             /* Softer edges for the line */
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-table {
-  width: 50%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  font-size: 16px; /* Font size for the paragraph */
-  line-height: 1.6; /* Improves readability */
-}
-
-th, td {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ddd;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Style for the note */
-.note {
-width: 50%;
-margin: 5px auto;
-margin-bottom: 80px;
-font-size: 16px;
-color: #363535;
-text-align: center;
-}
-
-/* Add some padding for empty cells */
-td[colspan] {
-  padding: 10px;
-}
-
-
-.title {
-  text-align: center;
-  font-size: 1.5em;               /* Slightly smaller than the main title */
-  color: #666;                    /* Softer color for the subtitle */
-  letter-spacing: 1px;            /* Slightly less letter spacing than the main title */
-  text-transform: capitalize;     /* Optional: capitalizes the first letter of each word */
-  margin-top: 10px;               /* Adds space between the title and subtitle */
-  margin-bottom: 10px;            /* Adds space below the subtitle */
-  position: relative;
-  display: inline-block;
-}
-
-.title::after {
-  content: '';
-  width: 100px;                    /* A shorter underline for the subtitle */
-  height: 2px;
-  background-color: #f39c12;      /* Matching the underline color of the main title */
-  position: absolute;
-  bottom: -8px;                   /* Closer to the subtitle text */
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 3px;             /* Softer edges for the line */
-}
-
-.a {
-  line-height: 1.6; /* Improves readability */
-  max-width: 100%; /* Ensures text doesn’t stretch too wide */
-  text-align: justify; /* Justify text alignment */
-  color: rgb(255, 128, 0);
-  text-decoration: underline;
-  font-size: 16px; /* Font size for the paragraph */
-}
-
 
 .email-button {
   line-height: 1.6; /* Improves readability */
+  color: rgb(255, 128, 0);
+  text-decoration: underline;
+  font-size: 20px; /* Font size for the paragraph */
+}
+
+/* Styling the Image in Box 1 */
+.box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px; /* Optional for rounded corners */
+}
+
+/* Horizontal Band */
+.horizontal-band {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.horizontal-band h2 {
+  text-align: left;
+  font-size: 30px;
+  color: #666;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  position: relative;
+  display: inline-block;
+}
+
+.horizontal-band h2::after {
+  content: '';
+  width: 100px;                    /* A shorter underline for the subtitle */
+  height: 2px;
+  background-color: #f39c12;      /* Matching the underline color of the main title */
+  position: absolute;
+  bottom: -8px;                   /* Closer to the subtitle text */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;             /* Softer edges for the line */
+}
+
+.horizontal-band a {
+  line-height: 1.6; /* Improves readability */
   max-width: 100%; /* Ensures text doesn’t stretch too wide */
   text-align: justify; /* Justify text alignment */
   color: rgb(255, 128, 0);
   text-decoration: underline;
-  font-size: 16px; /* Font size for the paragraph */
+  font-size: 20px; /* Font size for the paragraph */
 }
+
+
+.horizontal-band p {
+  font-size: 20px; /* Font size for the paragraph */
+  line-height: 1.6; /* Improves readability */
+  max-width: 100%; /* Ensures text doesn’t stretch too wide */
+  color: #333; /* Text color */
+  text-align: center; /* Justify text alignment */
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+/* Table Section */
+.expandable-table {
+    width: 80%;
+    border-collapse: collapse;
+    text-align: left;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .expandable-table td {
+    padding: 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    background-color: #f9f9f9;
+    font-size: 18px; /* Font size for the paragraph */
+    line-height: 1.6; /* Improves readability */
+    max-width: 100%; /* Ensures text doesn’t stretch too wide */
+    color: #333; /* Text color */
+    text-align: left; /* Justify text alignment */
+  }
+  
+  .expandable-table td em, .expandable-table td i {
+    font-style: italic;
+  }
+  
+  .expandable-table td p {
+    display: none;
+    margin-top: 10px;
+    color: #000000;
+    font-size: 18px;
+  }
+  
+  .expanded-content {
+    display: flex;
+    align-items: center; /* Center the items vertically */
+    margin-top: 20px; /* Add some space above the image */
+    gap: 25px; /* Add some space between the image and the text */
+  }
+
+
+  .right-aligned-link {
+    display: block;         /* Ensures the link takes up its own line */
+    text-align: right;      /* Right-aligns the text inside the block */
+    margin-top: 10px;       /* Adds some space above the link */
+  }
+  
+  .expanded-content a {
+    font-size: 18px; /* Font size for the paragraph */
+    line-height: 1.6; /* Improves readability */
+    max-width: 100%; /* Ensures text doesn’t stretch too wide */
+    text-align: right; /* Justify text alignment */
+    margin-top: 20px;
+    margin-right: 20px;
+    color: rgb(255, 128, 0);
+    text-decoration: underline;
+  }
+  
+  .expanded-content img {
+    border-radius: 10px; /* Optional: rounds the image corners */
+    display: block;
+    max-width:500px;
+    max-height:400px;
+    width: auto;
+    height: auto;
+  }
+  
+  .expandable-table td.expanded {
+    background-color: #e0f7fa;
+    height: auto;
+  }
+  
+  .expandable-table td.expanded p {
+    display: block;
+  }
+  
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+
+
+  .styled-list {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes padding from the list */
+    text-align: justify;
+  }
+  
+  .styled-list li {
+    position: relative;
+    padding-left: 20px; /* Adds space for custom bullet */
+    margin-bottom: 10px; /* Adds space between list items */
+    line-height: 1.6; /* Improves readability */
+    color: #333; /* Text color */
+  }
+  
+  .styled-list li::before {
+    content: '\2022'; /* Unicode for a bullet symbol */
+    position: absolute;
+    left: 0;
+    color: #f39c12; /* Matching color with the title underline */
+    font-size: 20px; /* Size of the bullet */
+    line-height: 1.6;
+  }
+
+
+  table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 16px; /* Font size for the paragraph */
+    line-height: 1.6; /* Improves readability */
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for the note */
+  .note {
+  width: 50%;
+  margin: 5px auto;
+  margin-bottom: 80px;
+  font-size: 16px;
+  color: #363535;
+  text-align: center;
+  }
+  
+  /* Add some padding for empty cells */
+  td[colspan] {
+    padding: 10px;
+  }
+  
+
+
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .boxes {
+        flex-direction: column;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .box {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .box:last-child {
+        margin-bottom: 0;
+    }
+
+    .box img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 15px auto; /* Center the image horizontally and add space below */
+        border-radius: 5px; /* Optional for rounded corners */
+    }
+
+    .expanded-content {
+        flex-direction: column;
+    }
+
+    .horizontal-band {
+      flex-direction: column;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+}
+
+
+
+

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Pietro Campa</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">Pietro Campa</a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="CV.html">CV</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="contacts.html">Contacts</a></li>    
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- Home Section -->
+    <section id="home">
+      <div class="intro-band">
+        <div class="intro-box">
+          <img src="Pietro.jpg" alt="Photo of Pietro Campa">
+        </div>
+        <div class="intro-box">
+          <title style="text-align: center;">Pietro Campa</title>
+          <p style="color: #666; text-align: left; ">Ph.D. Candidate in Economics at the University of Geneva.</p>
+          <p ><strong>On the Academic Job Market 2024/2025.</strong></p>                
+          <p style="text-align: left;">Research Interest: Labor economics, Applied Microeconomics.</p>
+          <p>My research focuses on the impact of initial conditions and social interactions on human capital formation and labor market outcomes.</p>
+          <p>I will complete my Ph.D. in Economics at the University of Geneva in September 2025, under the supervision of Giacomo De Giorgi and Robert Frederic Nicoud.</p>
+    
+          <p>Download my <a href="CV_Campa.pdf" target="_blank">CV</a>.</p>
+          <!--<p>Download my <a href="JMP.pdf" target="_blank">Job Market Paper</a>.</p>-->
+          <p>Email me at <a href="mailto:pietro.campa@unige.ch" class="email-button">pietro.campa@unige.ch</a>.</p>
+          <p>I am grateful to the <a href="https://www.econ.berkeley.edu/" target="_blank">Department of Economics of the University of California at Berkeley</a> for hosting me in Spring 2024.</p>            
+          <p>I am a member of <a href="https://www.rarevoicesineconomics.com/" target="_blank">Rare Voices in Economics</a>: check out our activities!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research">
+
+      <div class="jmp-band">
+        <div class="text-content">
+          <h2><strong>"No Kid is an Island: Peer Effects and Intergenerational Mobility"</strong></h2>
+          <p>Economic inequalities persist from one generation to the next. How much of this transmission is due to differences in peer exposure? Exploiting within school across cohort exogenous variation in schoolmates' parental background among Danish high school students, I show that a $1 increase in average schoolmates' parental earnings results in a $0.08 increase in adult earnings. This effect is as large as 30% of the parent-child correlation in earnings. I find that former schoolmates are connected on labor market networks: they join their peers' firms and leverage school connections as outside options to secure higher wages, effectively benefiting from advantages inherited by their peers from their parents.</p>
+          <!--<a href="CV_Campa.pdf" target="_blank">Read the full paper</a>-->
+        </div>
+        <div class="image-content">
+          <img src="nki.png" alt="Graphical representation of study findings">
+        </div>
+      </div>
+
+      <!-- Research Content -->
+
+      <div class="table-title">Research: Published</div> <!-- Title for the table -->
+
+      <table class="expandable-table">
+        <tr>
+          <td data-content="We study how inheriting parents' credit histories affects the initial credit scores, access to credit, and life cycle borrowing of young individuals entering the credit market. We establish that inherited histories significantly positively affect initial scores, which in turn are very persistent. Inherited histories only affect outcomes through initial credit scores, which then have significant persistent effects on credit use and access, such as having a mortgage. Our results are consistent with mechanisms of self-fulfilling liquidity traps: low credit scores mean lack of access to credit, reinforcing low credit scores. Future research should address the contribution of such mechanisms to wealth inequality."
+              data-img="bornprime.png" data-link="https://www.aeaweb.org/articles?id=10.1257/pandp.20231096" onclick="toggleText(this)">      
+            <strong>“Born to be (sub)Prime: An Exploratory Analysis.”</strong>
+            with H. Bach, G. De Giorgi, J. Nosil and D. Pietrobon. <br>
+            <em>AEA Papers and Proceedings, 2023, 113: 166-71.</em>
+          </td>
+        </tr>
+      </table>
+
+      <div class="table-title">Work in Progress</div> <!-- Title for the table -->
+
+      <table class="expandable-table">
+        <tr>
+          <td data-content="We study the role of direct interactions between children and their grandparents in the process of human capital accumulation within the family. Using Danish administrative data, we document grandparental effects on children’s life-time incomes other than grandparents’ influence on parental human capital. These results call for broadening the scope of established models of intergenerational mobility and human capital accumulation within the family which consider only two generations. Finally, we propose mass-layoffs as a potential source of exogenous variation in retirement time to estimate the causal impact of grandparental interactions on their grandkids."
+              data-img="gps.png" onclick="toggleText(this)">      
+            <strong>“Values for Grandchildren: The Role of Grandparents in Intergenerational Transmission of Income.”</strong>
+            with G. De Giorgi, M. Prado and B. Severgnini. <br>
+        </tr>
+        <tr>
+          <td data-content="Using a comprehensive panel of credit reports, we show that plausibly exogenous increases in credit availability for young individuals with short credit histories improve their credit outcomes by increasing access to credit and reducing delinquency rates, while simultaneously enhancing their residential choices. These effects persist at least 10 years after the treatment. We rationalize these findings using a model of credit access with heterogeneous upfront costs on the lender side. Our analysis suggests there is scope for intervention to promote credit access for young individuals."
+              data-img="ccard.png" onclick="toggleText(this)">      
+            <strong>“All You Need Is a Card: Long-Term Impact of Early-Life Credit Access.”</strong>
+            with H. Bach, G. De Giorgi, J. Nosil and D. Pietrobon. <br>
+        </tr>
+        <tr>  
+          <td data-content="">
+            <strong>“Pay Transparency and Firm Wage Premia.”</strong>
+            with F. Meluzzi. <br>
+          </td>
+        </tr>
+      </table>
+
+      <div class="table-title">Policy Reports</div> <!-- Title for the table -->
+
+      <table class="expandable-table">
+        <tr>
+          <td data-content="This report examines immigrant integration in Europe, analyzing socio-economic factors, policy impacts, and future recommendations to enhance the integration process."
+              data-img="LDA.jpg" data-link="https://dagliano.unimi.it/wp-content/uploads/2020/02/Mig_Obs_4_Report.pdf" onclick="toggleText(this)">      
+            <strong>“4th Migration Observatory Report: Immigrant Integration in Europe”</strong>
+            with T. Frattini. <br>
+            <em>Centro Studi Luca D'Agliano</em>
+          </td>
+        </tr>
+      </table>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Pietro Campa</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+
+  <script>
+    // Select the menu toggle button and the navigation menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    // Add a click event listener to the toggle button
+    menuToggle.addEventListener('click', () => {
+      // Toggle the 'active' class on the navigation menu
+      const isActive = navMenu.classList.toggle('active');
+
+      // Update the aria-expanded attribute for accessibility
+      menuToggle.setAttribute('aria-expanded', isActive);
+    });
+  </script>
+
+  
+  <script>
+    function toggleText(cell) {
+      // Check if the clicked cell is already expanded
+      if (cell.classList.contains('expanded')) {
+        // Collapse the cell and remove the expanded content
+        cell.classList.remove('expanded');
+        let content = cell.querySelector('.expanded-content');
+        if (content) cell.removeChild(content);
+      } else {
+        // Collapse any other expanded cells
+        var cells = document.querySelectorAll('.expandable-table td');
+                cells.forEach(function(td) {
+          td.classList.remove('expanded');
+          let content = td.querySelector('.expanded-content');
+          if (content) td.removeChild(content); // Remove previous content
+        });
+      
+        // Expand the clicked cell
+        cell.classList.add('expanded');
+      
+        // Create a container for the expanded content
+        let div = document.createElement('div');
+        div.classList.add('expanded-content');
+      
+        // Add the image inside the container if available
+        let imgSrc = cell.getAttribute('data-img');
+        if (imgSrc) {
+          let img = document.createElement('img');
+          img.src = imgSrc;
+          img.alt = "Related Image";
+          div.appendChild(img);
+        }
+      
+        // Create a text container for the paragraph and link
+        let textDiv = document.createElement('div');
+        textDiv.classList.add('text-content');
+      
+        // Add the text inside the text container
+        let p = document.createElement('p');
+        p.textContent = cell.getAttribute('data-content') || "";
+        textDiv.appendChild(p);
+      
+        // Add the hyperlink below the text inside the text container
+        let link = cell.getAttribute('data-link');
+        if (link) {
+          let a = document.createElement('a');
+          a.href = link;
+          a.textContent = "Read the full paper";
+          a.target = "_blank";
+          textDiv.appendChild(a);
+        }
+      
+        // Append the text container to the expanded content
+        div.appendChild(textDiv);
+      
+        // Append the entire expanded content to the clicked cell
+        cell.appendChild(div);
+      }
+    }
+
+    // Toggle menu on mobile
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

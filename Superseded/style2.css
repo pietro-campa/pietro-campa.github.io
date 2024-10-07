@@ -1,0 +1,482 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  line-height: 1.6;
+  color: #333;
+}
+
+a {
+  color: rgb(255, 128, 0);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: blue;
+}
+
+.box {
+  background-color: #00000062; /* Green background */
+  color: white; /* White text color */
+  padding: 20px; /* Padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  font-size: 20px; /* Font size */
+  text-align: center; /* Center the text */
+  margin-top: 30px; /* Add space above the box */
+}
+
+/* The navigation menu */
+/***********************/
+
+/* Header and Navigation */
+header {
+  width: 100%;
+  background-color: rgba(243, 157, 18, 0.65); /* Semi-transparent orange */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center; /* Center the navigation container */
+  align-items: center; /* Vertically center the navigation items */
+  z-index: 1000; /* Ensure the header stays on top */
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .navbar{
+    display: none;
+  }
+
+  .intro-band {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(247, 244, 244);
+  text-decoration: none;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Space between links */
+}
+
+.nav-menu li a {
+  font-size: 16px;
+  color: rgb(247, 244, 244);
+  text-decoration: none;
+}
+
+.nav-menu li a:hover {
+  color: blue;
+}
+
+.main {
+  margin: 80px 150px 100px 150px; /* Top margin accounts for fixed header */
+}
+  
+/* Inroduction banner */
+/**********************/
+
+/* General styling for the intro-band */
+.intro-band {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+/* Styling for each box */
+.intro-box {
+  background-color: rgba(23, 23, 23, 0); /* Light grey background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.intro-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Give the image box and text box different flex ratios */
+.intro-box:nth-child(1) {
+  flex: 0 0 40%; /* Image box takes 40% of the width */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically (if needed) */
+}
+
+.intro-box:nth-child(2) {
+  flex: 0 0 60%; /* Text box takes 55% of the width */
+}
+
+/* Ensure they stack one below the other on smaller screens */
+@media (max-width: 768px) {
+  .intro-box {
+    flex: 0 0 100%; /* Make both boxes 100% width on small screens */
+    margin: 10px 0;
+  }
+
+  .intro-band {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.intro-band p {
+  font-size: 16px; /* Font size for the paragraph */
+  line-height: 1.6; /* Improves readability */
+  max-width: 90%; /* Ensures text doesn’t stretch too wide */
+  color: #333; /* Text color */
+  text-align: justify; /* Justify text alignment */
+  margin-top: 10px;
+}
+
+/* Styling for the intro title */
+.intro-band title {
+  text-align: left;
+  font-size: 1.5em;               /* Slightly smaller than the main title */
+  color: #666;                    /* Softer color for the subtitle */
+  letter-spacing: 1px;            /* Slightly less letter spacing than the main title */
+  text-transform: capitalize;     /* Optional: capitalizes the first letter of each word */
+  margin-top: 10px;               /* Adds space between the title and subtitle */
+  margin-bottom: 10px;            /* Adds space below the subtitle */
+  position: relative;
+  display: inline-block;
+}
+
+.intro-band title::after {
+  content: '';
+  width: 100px;                    /* A shorter underline for the subtitle */
+  height: 2px;
+  background-color: #f39c12;      /* Matching the underline color of the main title */
+  position: absolute;
+  bottom: -8px;                   /* Closer to the subtitle text */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;             /* Softer edges for the line */
+}
+
+.intro-band a {
+  line-height: 1.6; /* Improves readability */
+  max-width: 100%; /* Ensures text doesn’t stretch too wide */
+  text-align: justify; /* Justify text alignment */
+  color: rgb(255, 128, 0);
+  text-decoration: underline;
+  font-size: 16px; /* Font size for the paragraph */
+}
+
+.styled-list {
+  list-style-type: none; /* Removes default bullet points */
+  padding: 0; /* Removes padding from the list */
+}
+
+.styled-list li {
+  position: relative;
+  padding-left: 20px; /* Adds space for custom bullet */
+  margin-bottom: 10px; /* Adds space between list items */
+  line-height: 1.6; /* Improves readability */
+  color: #333; /* Text color */
+}
+
+.styled-list li::before {
+  content: '\2022'; /* Unicode for a bullet symbol */
+  position: absolute;
+  left: 0;
+  color: #f39c12; /* Matching color with the title underline */
+  font-size: 20px; /* Size of the bullet */
+  line-height: 1.6;
+}
+
+/* JMP banner */
+/**********************/
+.jmp-band {
+  width: 100%; /* Ensures the band spans the full width of the screen */
+  background-color: #f39d1228; /* Light grey background for the band */
+  padding: 40px 0; /* Adds space above and below the content */
+  display: flex; /* Places image and text side by side */
+  justify-content: center; /* Centers the content within the band */
+  align-items: center; /* Aligns content vertically in the center */
+}
+
+.jmp-band .text-content {
+  flex: 1; /* Allows the text content to take up the remaining space */
+  margin-left: 50px; /* Space between text and image */
+  margin-right: 30px; /* Space between text and image */
+}
+
+.jmp-band p {
+  font-size: 16px; /* Font size for the paragraph */
+  line-height: 1.6; /* Improves readability */
+  max-width: 100%; /* Ensures text doesn’t stretch too wide */
+  color: #333; /* Text color */
+  text-align: justify; /* Justify text alignment */
+  margin-bottom: 5px;
+}
+
+.jmp-band a {
+  font-size: 18px; /* Font size for the paragraph */
+  line-height: 1.6; /* Improves readability */
+  max-width: 100%; /* Ensures text doesn’t stretch too wide */
+  text-align: left; /* Justify text alignment */
+  color: rgb(255, 128, 0);
+  text-decoration: underline;
+}
+
+.jmp-band .image-content {
+  flex: 0 0 30%; /* Sets the image container to take up 20% of the width */
+}
+
+.jmp-band img {
+  width: 95%; /* Ensures the image fills its container */
+  border-radius: 10px; /* Optional: rounds the image corners */
+}
+
+.jmp-band title {
+  text-align: left;
+  font-size: 1.25em;               /* Slightly smaller than the main title */
+  color: #666;                    /* Softer color for the subtitle */
+  letter-spacing: 1px;            /* Slightly less letter spacing than the main title */
+  text-transform: capitalize;     /* Optional: capitalizes the first letter of each word */
+  margin-top: 10px;               /* Adds space between the title and subtitle */
+  margin-bottom: 10px;            /* Adds space below the subtitle */
+  position: relative;
+  display: inline-block;
+}
+
+.jmp-band h2 {
+  font-size: 18px;
+}
+
+.jmp-band title::after {
+  content: '';
+  width: 100px;                    /* A shorter underline for the subtitle */
+  height: 2px;
+  background-color: #f39c12;      /* Matching the underline color of the main title */
+  position: absolute;
+  bottom: -8px;                   /* Closer to the subtitle text */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;             /* Softer edges for the line */
+}
+
+/* Styling for research section */
+
+.expandable-table {
+  width: 95%;
+  border-collapse: collapse;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expandable-table td {
+  padding: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  background-color: #f9f9f9;
+  font-size: 18px; /* Font size for the paragraph */
+  line-height: 1.6; /* Improves readability */
+  max-width: 100%; /* Ensures text doesn’t stretch too wide */
+  color: #333; /* Text color */
+  text-align: justify; /* Justify text alignment */
+}
+
+.expandable-table td em, .expandable-table td i {
+  font-style: italic;
+}
+
+.expandable-table td p {
+  display: none;
+  margin-top: 10px;
+  color: #000000;
+  font-size: 18px;
+}
+
+.expanded-content {
+  display: flex;
+  align-items: top; /* Center the items vertically */
+  margin-top: 20px; /* Add some space above the image */
+  gap: 25px; /* Add some space between the image and the text */
+}
+
+.expanded-content a {
+  font-size: 18px; /* Font size for the paragraph */
+  line-height: 1.6; /* Improves readability */
+  max-width: 100%; /* Ensures text doesn’t stretch too wide */
+  text-align: justify; /* Justify text alignment */
+  color: rgb(255, 128, 0);
+  text-decoration: underline;
+}
+
+.expanded-content img {
+  border-radius: 10px; /* Optional: rounds the image corners */
+  display: block;
+  max-width:500px;
+  max-height:400px;
+  width: auto;
+  height: auto;
+}
+
+.expandable-table td.expanded {
+  background-color: #e0f7fa;
+  height: auto;
+}
+
+.expandable-table td.expanded p {
+  display: block;
+}
+
+.table-title {
+  text-align: left;
+  font-size: 1.25em;               /* Slightly smaller than the main title */
+  color: #666;                    /* Softer color for the subtitle */
+  letter-spacing: 1px;            /* Slightly less letter spacing than the main title */
+  text-transform: capitalize;     /* Optional: capitalizes the first letter of each word */
+  margin-top: 60px;               /* Adds space between the title and subtitle */
+  margin-bottom: 20px;            /* Adds space below the subtitle */
+  margin-left: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.table-title::after {
+  content: '';
+  width: 100px;                    /* A shorter underline for the subtitle */
+  height: 2px;
+  background-color: #f39c12;      /* Matching the underline color of the main title */
+  position: absolute;
+  bottom: -8px;                   /* Closer to the subtitle text */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;             /* Softer edges for the line */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+table {
+  width: 50%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-size: 16px; /* Font size for the paragraph */
+  line-height: 1.6; /* Improves readability */
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Style for the note */
+.note {
+width: 50%;
+margin: 5px auto;
+margin-bottom: 80px;
+font-size: 16px;
+color: #363535;
+text-align: center;
+}
+
+/* Add some padding for empty cells */
+td[colspan] {
+  padding: 10px;
+}
+
+
+.title {
+  text-align: center;
+  font-size: 1.5em;               /* Slightly smaller than the main title */
+  color: #666;                    /* Softer color for the subtitle */
+  letter-spacing: 1px;            /* Slightly less letter spacing than the main title */
+  text-transform: capitalize;     /* Optional: capitalizes the first letter of each word */
+  margin-top: 10px;               /* Adds space between the title and subtitle */
+  margin-bottom: 10px;            /* Adds space below the subtitle */
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  width: 100px;                    /* A shorter underline for the subtitle */
+  height: 2px;
+  background-color: #f39c12;      /* Matching the underline color of the main title */
+  position: absolute;
+  bottom: -8px;                   /* Closer to the subtitle text */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;             /* Softer edges for the line */
+}
+
+.a {
+  line-height: 1.6; /* Improves readability */
+  max-width: 100%; /* Ensures text doesn’t stretch too wide */
+  text-align: justify; /* Justify text alignment */
+  color: rgb(255, 128, 0);
+  text-decoration: underline;
+  font-size: 16px; /* Font size for the paragraph */
+}
+
+
+.email-button {
+  line-height: 1.6; /* Improves readability */
+  max-width: 100%; /* Ensures text doesn’t stretch too wide */
+  text-align: justify; /* Justify text alignment */
+  color: rgb(255, 128, 0);
+  text-decoration: underline;
+  font-size: 16px; /* Font size for the paragraph */
+}
+
+
+
+
+
+
+
+
+
+
