@@ -10,11 +10,13 @@
 
 <body>
 
+
+
     <!-- Intro Band -->
   <!-- Header -->
 
   <header>
-    <nav class="navbar">
+    <div class="navbar">
       <a href="index.html" class="nav-logo">Pietro Campa</a>
       <ul class="nav-menu" id="nav-menu">
         <li><a href="index.html">Home</a></li>
@@ -23,14 +25,27 @@
         <li><a href="teaching.html">Teaching</a></li>
         <li><a href="contacts.html">Contacts</a></li>    
       </ul>
-    </nav>
+    </div>
   </header>
+
+  <script>
+    // Get computed margin-left of the body
+    const bodyStyle = getComputedStyle(document.body);
+    const bodyMarginLeft = bodyStyle.marginLeft;
+    const bodyMarginRight = bodyStyle.marginRight;
+
+    // Apply body margin-left to the navbar
+    const navbar = document.querySelector('.navbar');
+    navbar.style.marginLeft = bodyMarginLeft;
+    navbar.style.marginRight = bodyMarginRight;
+  </script>
+
 
 
 
     <!-- Two Boxes Side by Side -->
     <section class="boxes">
-      <div class="box", style= "justify-content: center; align-items: center; display: flex;">
+      <div class="box", style= "justify-content: center; align-items: center; display: flex; padding-bottom: 0px;">
           <img src="Pietro.jpg" alt="Me">
       </div>
       <div class="box">
@@ -48,7 +63,7 @@
     </section>
 
     <!-- Horizontal Band -->
-        <section class="boxes-reverse">
+        <section class="boxes-reverse" >
             <div class="box" style="background-color: rgba(243, 157, 18, 0.15);">
               <h2 style=" text-align: center; ">Job Market Paper</h2>
                 <p style=" text-align: center; "><strong>"No Kid is an Island: Peer Effects and Intergenerational Mobility"</strong></p>                
