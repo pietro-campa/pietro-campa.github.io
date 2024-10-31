@@ -10,7 +10,7 @@ body {
   padding: 20px;
   background-color: #ffffff;
   margin: 30px auto 0; /* Top margin accounts for fixed header */
-  max-width: 80%;
+  max-width: 90%;
 }
 
 /* Header Styles */
