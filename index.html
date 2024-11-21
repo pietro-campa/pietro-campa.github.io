@@ -57,8 +57,8 @@
 
         <p class="para" >I will complete my Ph.D. in Economics at the <a class = "link" href="https://www.unige.ch/gsem/en/" target="_blank">University of Geneva</a> in August 2025, under the supervision of <a class = "link" href="https://sites.google.com/site/giacomodegiorgi/" target="_blank">Giacomo De Giorgi</a> and <a class = "link" href="https://frobertnicoud.weebly.com/" target="_blank">Frederic Robert-Nicoud</a>.</p>
         <p class="para" >I visited the <a class = "link" href="https://www.econ.berkeley.edu/" target="_blank">University of California at Berkeley</a>, hosted by <a class = "link" href="https://moretti.econ.berkeley.edu/home" target="_blank">Enrico Moretti</a> in Spring 2024.</p>            
-        <p class="para" >I have recieved the Best TA Award from <a class = "link" href="https://www.rarevoicesineconomics.com/" target="_blank">IEE, University of Geneva</a> in November 2024.</p>
-        <p class="para" >I am a member of <a class = "link" href="https://www.unige.ch/gsem/en/" target="_blank">Rare Voices in Economics</a>: check out our activities!</p>
+        <p class="para" >I have recieved the Best TA Award from <a class = "link" href="https://www.unige.ch/gsem/en/" target="_blank">IEE, University of Geneva</a> in November 2024.</p>
+        <p class="para" >I am a member of <a class = "link" href="https://www.rarevoicesineconomics.com/" target="_blank">Rare Voices in Economics</a>: check out our activities!</p>
       </div> 
     </section>
 
@@ -180,10 +180,10 @@
         textDiv.classList.add('text-content');
       
         // Add the text inside the text container
-        let p = document.createElement('p');
-        p.textContent = cell.getAttribute('data-content') || "";
-        p.classList.add('justify-text');
-        textDiv.appendChild(p);
+        let para = document.createElement('p'); // Changed from <para> to <p>, which is semantically correct
+        para.textContent = cell.getAttribute('data-content') || "";
+        para.classList.add('para'); // Adds the 'para' class with justification styling
+        textDiv.appendChild(para);
       
         // Add the hyperlink below the text inside the text container
         let link = cell.getAttribute('data-link');
