@@ -10,6 +10,7 @@
 /* Control font size */
 html {
   font-size: 16px; /* Use rem for scalable font sizes */
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 769px) {
@@ -49,7 +50,7 @@ header {
   padding: 0 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   z-index: 1000;
   overflow: hidden;
@@ -61,15 +62,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
-}
-
-.nav-logo {
-  color: #ffffff;
-  letter-spacing: 1.25px;
-  text-transform: capitalize;
-  margin-left: 20px; /* Adjusted for mobile */
-  text-decoration: none;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .nav-menu {
@@ -199,6 +191,7 @@ header {
   padding: 20px;
   border: 0;
   display: flex;
+  justify-content: center;     /* Centers items horizontally (optional) */
   flex-direction: column;
 }
 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Scroll with Offset</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #333;
+      color: white;
+      padding: 10px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-around;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+    section {
+      height: 100vh;
+      padding: 20px;
+    }
+    .section-1 { background: lightcoral; }
+    .section-2 { background: lightblue; }
+    .section-3 { background: lightgreen; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#section-1">Section 1</a>
+    <a href="#section-2">Section 2</a>
+    <a href="#section-3">Section 3</a>
+  </nav>
+
+  <section id="section-1" class="section-1">Section 1</section>
+  <section id="section-2" class="section-2">Section 2</section>
+  <section id="section-3" class="section-3">Section 3</section>
+
+  <script>
+    // Offset value (e.g., height of navbar + extra spacing)
+    const navbarHeight = document.querySelector('nav').offsetHeight;
+    const extraSpacing = 10; // Adjust this value as needed
+    const offset = navbarHeight + extraSpacing;
+
+    // Smooth scrolling function
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1); // Get the target id
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          // Calculate the scroll position
+          const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+          const scrollToPosition = targetPosition - offset;
+
+          // Smooth scroll
+          window.scrollTo({
+            top: scrollToPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
