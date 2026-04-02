@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -8,210 +8,177 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-
-
-    <!-- Intro Band -->
-  <!-- Header -->
-   
-
   <header>
-    <div id="navbar">
+    <nav id="navbar">
       <ul class="nav-menu" id="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#research">Research</a></li>
         <li><a href="CV.html">CV</a></li>
         <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="contacts.html">Contacts</a></li>    
+        <li><a href="contacts.html">Contacts</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
-  <script>
-    // Get computed margin-left of the body
-    const bodyStyle = getComputedStyle(document.body);
-    const bodyMarginLeft = bodyStyle.marginLeft;
-    const bodyMarginRight = bodyStyle.marginRight;
+  <section class="boxes">
+    <div class="box portrait-box">
+      <img src="Pietro.jpg" alt="Portrait of Pietro Campa">
+    </div>
+    <div class="box hero-copy">
+      <h1 class="section-title hero-title">Pietro Campa</h1>
+      <p class="hero-subtitle">Postdoctoral Researcher, Rockwool Foundation Berlin</p>
 
-    // Apply body margin-left to the navbar
-    const navbar = document.querySelector('.navbar');
-    navbar.style.marginLeft = bodyMarginLeft;
-    navbar.style.marginRight = bodyMarginRight;
-  </script>
+      <p class="para lead">I am a labor economist studying education, social interactions, and intergenerational mobility.</p>
+      <p class="para">I completed my Ph.D. in Economics at the <a class="link" href="https://www.unige.ch/gsem/en/" target="_blank" rel="noreferrer">University of Geneva</a> in September 2025, under the supervision of <a class="link" href="https://sites.google.com/site/giacomodegiorgi/" target="_blank" rel="noreferrer">Giacomo De Giorgi</a> and <a class="link" href="https://frobertnicoud.weebly.com/" target="_blank" rel="noreferrer">Frederic Robert-Nicoud</a>.</p>
+      <p class="para">My research focuses on how early-life environments, peer interactions, and family networks shape labor market outcomes and lifetime success.</p>
+      <p class="para">I visited the <a class="link" href="https://www.econ.berkeley.edu/" target="_blank" rel="noreferrer">University of California, Berkeley</a>, hosted by <a class="link" href="https://moretti.econ.berkeley.edu/home" target="_blank" rel="noreferrer">Enrico Moretti</a>, in Spring 2024, and I received the Best TA Award from the Institute of Economics and Econometrics at the University of Geneva in November 2024.</p>
+    </div>
+  </section>
 
+  <section class="boxes-reverse" id="research">
+    <div class="box highlight-panel jmp-panel">
+      <h2 class="section-title">Job Market Paper</h2>
+      <p class="para lead"><strong><a class="link" href="CampaJMP.pdf">No Kid Is an Island: Peer Effects and Intergenerational Mobility</a></strong></p>
+      <p class="para">Economic inequalities persist from one generation to the next. This paper studies whether children&apos;s social interactions mirror and amplify parental disparities. Exploiting within-school, across-cohort variation in schoolmates&apos; parental background among Danish high school students, I estimate the causal effect of peer background on adult earnings. A one-dollar increase in average schoolmates&apos; parental earnings raises adult earnings by eight cents, an effect equal to 42 percent of the parent-child earnings correlation. The evidence suggests that former schoolmates remain connected in labor market networks, join peers&apos; firms, and use school connections as outside options to secure higher wages.</p>
+    </div>
+    <div class="box figure-box">
+      <a class="feature-link jmp-figure-link" href="CampaJMP.pdf">
+        <img src="nki.png" alt="Preview figure for the job market paper">
+        <span class="feature-caption">The project links school peer composition to later-life earnings through peer effects and labor-market networks.</span>
+      </a>
+    </div>
+  </section>
 
-
-
-    <!-- Two Boxes Side by Side -->
-    <section class="boxes">
-      <div class="box", style= "justify-content: center; align-items: center; display: flex; padding-bottom: 0px;">
-          <img src="Pietro.jpg" alt="Me">
+  <section class="horizontal-band">
+    <div class="feature-grid">
+      <div class="feature-item">
+        <a class="feature-link" href="CampaJMP.pdf">
+          <img src="nki.png" alt="No Kid Is an Island">
+          <span class="feature-caption">No Kid Is an Island: peer effects and intergenerational mobility.</span>
+        </a>
       </div>
-      <div class="box">
-        <h2 class="section-title" style="--characters: 10;">Pietro Campa</h2>
-        <p class="para" style="text-align: center !important;"><strong>Postdoc at the Rockwool Foundation Berlin.</strong></p>   
-
-        <p class="para" style = "margin-top: 35px;">My research centers on labor economics and the economics of education, focusing on the impact of initial conditions and social interactions on labor market outcomes and lifetime success. I am interested in how these factors contribute to the persistence of intergenerational inequalities and their broader implications for societal and labor market efficiency.</p>
-
-        <p class="para" >I have completed my Ph.D. in Economics at the <a class = "link" href="https://www.unige.ch/gsem/en/" target="_blank">University of Geneva</a> in Septermber 2025, under the supervision of <a class = "link" href="https://sites.google.com/site/giacomodegiorgi/" target="_blank">Giacomo De Giorgi</a> and <a class = "link" href="https://frobertnicoud.weebly.com/" target="_blank">Frederic Robert-Nicoud</a>.</p>
-        <p class="para" >I visited the <a class = "link" href="https://www.econ.berkeley.edu/" target="_blank">University of California at Berkeley</a>, hosted by <a class = "link" href="https://moretti.econ.berkeley.edu/home" target="_blank">Enrico Moretti</a> in Spring 2024.</p>            
-        <p class="para" >I have recieved the Best TA Award from <a class = "link" href="https://www.unige.ch/gsem/en/" target="_blank">IEE, University of Geneva</a> in November 2024.</p>
-        <p class="para" >I am a member of <a class = "link" href="https://www.rarevoicesineconomics.com/" target="_blank">Rare Voices in Economics</a>: check out our activities!</p>
-      </div> 
-    </section>
-
-    <section class="boxes-reverse" id="research">
-      <div class="box" style="background-color: rgba(243, 157, 18, 0.15);">
-        <h2 class="section-title"  style=" text-align: center; --characters: 16; font-size: 2rem;">Job Market Paper</h2>
-        <p class="para" style=" text-align: center; margin-top: 15px; margin-bottom: 5px;"><strong><a class = "link" href="CampaJMP.pdf">"No Kid is an Island: Peer Effects and Intergenerational Mobility"</a></strong></p>                
-        <p class="para" style="text-align: justify; ">Economic inequalities persist from one generation to the next. To what extent is this due to childrens’ social interactions mirroring parental disparities? While existing research documents parental investments and local economic conditions as crucial for social mobility, this paper studies the causal impact of social interactions on economic outcomes. Exploiting within school across cohort exogenous variation in schoolmates’ parental background among Danish high school students, I show that a $1 increase in average schoolmates’ parental earnings results in a $0.08 increase in adult earnings. This effect is as large as 42% of the parent-child correlation in earnings. I find that former schoolmates are connected on labor market networks: they join their peers’ firms and leverage school connections as outside options to secure higher wages, effectively benefiting from advantages inherited by their peers from their parents.</p>
+      <div class="feature-item">
+        <a class="feature-link" href="https://www.aeaweb.org/articles?id=10.1257/pandp.20231096" target="_blank" rel="noreferrer">
+          <img src="bornprime.png" alt="Born to Be Subprime">
+          <span class="feature-caption">Born to Be (Sub)Prime: inherited credit histories and early credit access.</span>
+        </a>
       </div>
-      <div class="box", style="justify-content: center; align-items: center; display: flex;">
-        <img src="nki.png">
+      <div class="feature-item">
+        <a class="feature-link" href="#research">
+          <img src="gps.png" alt="Values for Grandchildren">
+          <span class="feature-caption">Values for Grandchildren: grandparental interactions and lifetime income.</span>
+        </a>
       </div>
-    </section>
+    </div>
 
+    <h3 class="plain-section-title">Published</h3>
+    <table class="expandable-table">
+      <tr>
+        <td data-content="We study how inheriting parents' credit histories affects the initial credit scores, access to credit, and life-cycle borrowing of young individuals entering the credit market. Inherited histories significantly improve initial scores, which are highly persistent. These initial scores then shape later access to credit and borrowing choices, including the probability of holding a mortgage. The findings are consistent with self-fulfilling liquidity traps in which low initial scores restrict access to credit and reinforce later disadvantages." data-img="bornprime.png" data-link="https://www.aeaweb.org/articles?id=10.1257/pandp.20231096" onclick="toggleText(this)">
+          <strong>Born to Be (Sub)Prime: An Exploratory Analysis.</strong><br>
+          with H. Bach, <a class="link" href="https://sites.google.com/site/giacomodegiorgi/" target="_blank" rel="noreferrer">G. De Giorgi</a>, <a class="link" href="https://www.jaromirnosal.net/" target="_blank" rel="noreferrer">J. Nosal</a> and <a class="link" href="https://sites.google.com/view/davide-pietrobon/home" target="_blank" rel="noreferrer">D. Pietrobon</a>. <em>AEA Papers and Proceedings, 2023, 113: 166-71.</em>
+        </td>
+      </tr>
+    </table>
+  </section>
 
-    <section class="horizontal-band">
+  <section class="horizontal-band">
+    <h3 class="plain-section-title">Ongoing</h3>
+    <table class="expandable-table">
+      <tr>
+        <td data-content="We study the role of direct interactions between children and their grandparents in the process of human capital accumulation within the family. Using Danish administrative data, we document grandparental effects on children&apos;s lifetime incomes beyond the influence of grandparents on parental human capital. We then propose mass layoffs as a source of exogenous variation in retirement time to estimate the causal effect of grandparental interactions on grandchildren." data-img="gps.png" onclick="toggleText(this)">
+          <strong>Values for Grandchildren: The Role of Grandparents in Intergenerational Transmission of Income.</strong><br>
+          with <a class="link" href="https://sites.google.com/site/giacomodegiorgi/" target="_blank" rel="noreferrer">G. De Giorgi</a>, <a class="link" href="https://www.cbs.dk/en/research/departments-and-centres/department-of-economics/staff/mpeco" target="_blank" rel="noreferrer">M. Prado</a> and <a class="link" href="https://sites.google.com/site/batsevergnini/" target="_blank" rel="noreferrer">B. Severgnini</a>.
+        </td>
+      </tr>
+      <tr>
+        <td data-content="Using a comprehensive panel of credit reports, we show that plausibly exogenous increases in credit availability for young individuals with short credit histories improve later credit outcomes, expand access to borrowing, and improve residential choices. These effects remain visible at least ten years after treatment. We rationalize the results with a model of credit access with heterogeneous upfront costs on the lender side." data-img="ccard.png" onclick="toggleText(this)">
+          <strong>All You Need Is a Card: Long-Term Impact of Early-Life Credit Access.</strong><br>
+          with H. Bach, <a class="link" href="https://sites.google.com/site/giacomodegiorgi/" target="_blank" rel="noreferrer">G. De Giorgi</a>, <a class="link" href="https://www.jaromirnosal.net/" target="_blank" rel="noreferrer">J. Nosal</a> and <a class="link" href="https://sites.google.com/view/davide-pietrobon/home" target="_blank" rel="noreferrer">D. Pietrobon</a>.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Pay Transparency and Firm Wage Premia.</strong><br>
+          with <a class="link" href="https://sites.google.com/site/federicameluzzi1" target="_blank" rel="noreferrer">F. Meluzzi</a>.
+        </td>
+      </tr>
+    </table>
+  </section>
 
-        <h2 class = "section-title" style="--characters: 10; font-size: 2rem;">Research: Published</h2> 
+  <section class="horizontal-band">
+    <h3 class="plain-section-title">Policy Reports</h3>
+    <table class="expandable-table">
+      <tr>
+        <td data-content="This report examines immigrant integration in Europe, analyzing socio-economic conditions, policy impacts, and possible ways to strengthen integration outcomes." data-img="LDA.jpg" data-link="https://dagliano.unimi.it/wp-content/uploads/2020/02/Mig_Obs_4_Report.pdf" onclick="toggleText(this)">
+          <strong>4th Migration Observatory Report: Immigrant Integration in Europe.</strong><br>
+          with <a class="link" href="https://sites.unimi.it/tommasofrattini/" target="_blank" rel="noreferrer">T. Frattini</a>.
+        </td>
+      </tr>
+    </table>
+  </section>
 
-        <table class="expandable-table">
-            <tr>
-              <td data-content="We study how inheriting parents' credit histories affects the initial credit scores, access to credit, and life cycle borrowing of young individuals entering the credit market. We establish that inherited histories significantly positively affect initial scores, which in turn are very persistent. Inherited histories only affect outcomes through initial credit scores, which then have significant persistent effects on credit use and access, such as having a mortgage. Our results are consistent with mechanisms of self-fulfilling liquidity traps: low credit scores mean lack of access to credit, reinforcing low credit scores. Future research should address the contribution of such mechanisms to wealth inequality."
-                  data-img="bornprime.png" data-link="https://www.aeaweb.org/articles?id=10.1257/pandp.20231096" onclick="toggleText(this)">      
-                <strong>“Born to be (sub)Prime: An Exploratory Analysis.”</strong><br>
-                with H. Bach, <a class = "link" href="https://sites.google.com/site/giacomodegiorgi/" target="_blank">G. De Giorgi</a>, <a class = "link" href="https://www.jaromirnosal.net/" target="_blank">J. Nosal</a> and <a class = "link" href="https://sites.google.com/view/davide-pietrobon/home" target="_blank">D. Pietrobon</a>. <em>AEA Papers and Proceedings, 2023, 113: 166-71.</em>
-              </td>
-            </tr>
-          </table>    
-
-    </section>
-
-    <section class="horizontal-band">
-
-      <h2 class = "section-title" style="--characters: 10; font-size: 2rem;">Research: Ongoing</h2>
-
-      <table class="expandable-table">
-        <tr>
-          <td data-content="We study the role of direct interactions between children and their grandparents in the process of human capital accumulation within the family. Using Danish administrative data, we document grandparental effects on children’s life-time incomes other than grandparents’ influence on parental human capital. These results call for broadening the scope of established models of intergenerational mobility and human capital accumulation within the family which consider only two generations. Finally, we propose mass-layoffs as a potential source of exogenous variation in retirement time to estimate the causal impact of grandparental interactions on their grandkids."
-              data-img="gps.png" onclick="toggleText(this)">      
-            <strong>“Values for Grandchildren: The Role of Grandparents in Intergenerational Transmission of Income.”</strong><br>
-            with <a class = "link" href="https://sites.google.com/site/giacomodegiorgi/" target="_blank">G. De Giorgi</a>, <a class = "link" href="https://www.cbs.dk/en/research/departments-and-centres/department-of-economics/staff/mpeco" target="_blank">M. Prado</a> and <a class = "link" href="https://sites.google.com/site/batsevergnini/" target="_blank">B. Severgnini</a>. 
-        </tr>
-        <tr>
-          <td data-content="Using a comprehensive panel of credit reports, we show that plausibly exogenous increases in credit availability for young individuals with short credit histories improve their credit outcomes by increasing access to credit and reducing delinquency rates, while simultaneously enhancing their residential choices. These effects persist at least 10 years after the treatment. We rationalize these findings using a model of credit access with heterogeneous upfront costs on the lender side. Our analysis suggests there is scope for intervention to promote credit access for young individuals."
-              data-img="ccard.png" onclick="toggleText(this)">      
-            <strong>“All You Need Is a Card: Long-Term Impact of Early-Life Credit Access.”</strong><br>
-            with H. Bach, <a class = "link" href="https://sites.google.com/site/giacomodegiorgi/" target="_blank">G. De Giorgi</a>, <a class = "link" href="https://www.jaromirnosal.net/" target="_blank">J. Nosal</a> and <a class = "link" href="https://sites.google.com/view/davide-pietrobon/home" target="_blank">D. Pietrobon</a>. 
-        </tr>
-        <tr>  
-          <td data-content="">
-            <strong>“Pay Transparency and Firm Wage Premia.”</strong><br>
-            with <a class = "link" href="https://sites.google.com/site/federicameluzzi1" target="_blank">F. Meluzzi</a>. 
-          </td>
-        </tr>
-      </table>
-
-    </section>
-
-
-    <section class="horizontal-band">
-
-      <h2>Policy Reports</h2> <!-- Title for the table -->
-
-
-      <table class="expandable-table">
-        <tr>
-          <td data-content="This report examines immigrant integration in Europe, analyzing socio-economic factors, policy impacts, and future recommendations to enhance the integration process."
-              data-img="LDA.jpg" data-link="https://dagliano.unimi.it/wp-content/uploads/2020/02/Mig_Obs_4_Report.pdf" onclick="toggleText(this)">      
-            <strong>“4th Migration Observatory Report: Immigrant Integration in Europe”</strong><br>
-            with <a class = "link" href="https://sites.unimi.it/tommasofrattini/" target="_blank">T. Frattini</a>.
-          </td>
-        </tr>
-      </table>
-
-    </section>
-
-
-
-      <!-- Scripts -->
-  <script src="scripts.js"></script>
-
-
-  
   <script>
     function toggleText(cell) {
-      // Check if the clicked cell is already expanded
       if (cell.classList.contains('expanded')) {
-        // Collapse the cell and remove the expanded content
         cell.classList.remove('expanded');
-        let content = cell.querySelector('.expanded-content');
-        if (content) cell.removeChild(content);
-      } else {
-        // Collapse any other expanded cells
-        var cells = document.querySelectorAll('.expandable-table td');
-                cells.forEach(function(td) {
-          td.classList.remove('expanded');
-          let content = td.querySelector('.expanded-content');
-          if (content) td.removeChild(content); // Remove previous content
-        });
-      
-        // Expand the clicked cell
-        cell.classList.add('expanded');
-      
-        // Create a container for the expanded content
-        let div = document.createElement('div');
-        div.classList.add('expanded-content');
-      
-        // Add the image inside the container if available
-        let imgSrc = cell.getAttribute('data-img');
-        if (imgSrc) {
-          let img = document.createElement('img');
-          img.src = imgSrc;
-          img.alt = "Related Image";
-          div.appendChild(img);
+        const content = cell.querySelector('.expanded-content');
+        if (content) {
+          cell.removeChild(content);
         }
-      
-        // Create a text container for the paragraph and link
-        let textDiv = document.createElement('div');
-        textDiv.classList.add('text-content');
-      
-        // Add the text inside the text container
-        let para = document.createElement('p'); // Changed from <para> to <p>, which is semantically correct
-        para.textContent = cell.getAttribute('data-content') || "";
-        para.classList.add('para'); // Adds the 'para' class with justification styling
-        textDiv.appendChild(para);
-      
-        // Add the hyperlink below the text inside the text container
-        let link = cell.getAttribute('data-link');
-        if (link) {
-          let a = document.createElement('a');
-          a.href = link;
-          a.target = "_blank";
-          a.classList.add('right-aligned-link');
-          textDiv.appendChild(a);
-          if (link==="https://dagliano.unimi.it/wp-content/uploads/2020/02/Mig_Obs_4_Report.pdf") {
-            a.textContent = "Read the full report";
-          } else {
-            a.textContent = "Read the full paper";
-          }
-        }
-      
-        // Append the text container to the expanded content
-        div.appendChild(textDiv);
-      
-        // Append the entire expanded content to the clicked cell
-        cell.appendChild(div);
+        return;
       }
+
+      const cells = document.querySelectorAll('.expandable-table td');
+      cells.forEach(function (td) {
+        td.classList.remove('expanded');
+        const content = td.querySelector('.expanded-content');
+        if (content) {
+          td.removeChild(content);
+        }
+      });
+
+      cell.classList.add('expanded');
+
+      const div = document.createElement('div');
+      div.classList.add('expanded-content');
+
+      const imgSrc = cell.getAttribute('data-img');
+      if (imgSrc) {
+        const img = document.createElement('img');
+        img.src = imgSrc;
+        img.alt = 'Related preview';
+        div.appendChild(img);
+      }
+
+      const textDiv = document.createElement('div');
+      textDiv.classList.add('text-content');
+
+      const summary = cell.getAttribute('data-content');
+      if (summary) {
+        const para = document.createElement('p');
+        para.textContent = summary;
+        para.classList.add('para');
+        textDiv.appendChild(para);
+      }
+
+      const link = cell.getAttribute('data-link');
+      if (link) {
+        const a = document.createElement('a');
+        a.href = link;
+        a.target = '_blank';
+        a.rel = 'noreferrer';
+        a.classList.add('right-aligned-link');
+        a.textContent = link.includes('Mig_Obs_4_Report') ? 'Read the full report' : 'Read the full paper';
+        textDiv.appendChild(a);
+      }
+
+      div.appendChild(textDiv);
+      cell.appendChild(div);
     }
-
-
   </script>
-
-
 
 </body>
 </html>
